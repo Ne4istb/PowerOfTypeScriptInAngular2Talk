@@ -1,0 +1,163 @@
+html, body {
+  font-family: 'Arial', monospace;
+  padding:0;
+  margin:0;
+  overflow: hidden;
+  color: #5C6E7E;
+  font-size: 30px;
+}
+
+#logo{
+  img {
+    width: 300px;
+  }
+}
+
+#logo: move(600,300);
+
+#line {
+  border: 2px solid #5C6E7E;
+  width: 70%;
+}
+#line: move(-200,300);
+
+#intro{
+  img {
+    width: 100%;
+  }
+}
+
+#talkInfo{
+  width: 700px;
+  height: 400px;
+  background-color: #5C6E7E;
+  opacity: 0.8;
+}
+#talkInfo: left(300);
+
+#title, #title2, #speaker, #time{
+  color: white;
+}
+
+#title, #title2{
+  font-size: 60px;
+}
+#title: move(-300,-120);
+#title2: move(-300,-40);
+
+#speaker: move(-300,100);
+#time: move(-300,150);
+
+#angularDartLogo{
+  img{
+    width: 750px;
+  }
+}
+#angularDartLogo, #angularDartText: hide;
+#angularDartLogo2, #angularDartText2: hide;
+
+#angularDartText{
+  font-size: 50px;
+}
+#angularDartText: up(200);
+
+#angularDartText2,
+#angularDartDescription,
+#angularDartPoint1,
+#angularDartPoint2 {
+  width: 730px;
+  transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#angularDartDescription, #angularDartPoint1, #angularDartPoint2: left(1500);
+
+.s2{
+  #talkInfo,#title,#title2,#speaker,#time,#intro: hide;
+  #angularDartText: show;
+}
+
+.s3{
+  #angularDartLogo: show;
+}
+
+#angularDartLogo2: move(300,-200) hide;
+#angularDartText2: move(-250,-200) hide;
+.s4 {
+  #angularDartText: move(-250,-200) scale(0.6,0.6) hide;
+  #angularDartLogo: move(300,-200) scale(0.2,0.2) hide;
+
+  #angularDartText2: show;
+  #angularDartLogo2: show;
+
+  #angularDartLogo2 {
+    transition-timing-function: ease-in;
+    transition-duration: 0.5s;
+    transition-delay: 0.5s;
+  }
+
+  #angularDartPoint1: left(250);
+  #angularDartDescription: move(-250,-50);
+  #angularDartPoint2: move(-250,50);
+
+}
+
+
+#atscriptDescr: up(1000) hide;
+#atscript: down(1000) hide;
+#atscript, #ngTypeScript{
+  img{
+    height: 445px;
+  }
+}
+
+.s5{
+  #atscript: move(0,0) show;
+  #atscriptDescr: move(0,-300) show;
+
+  #angularDartLogo2 {
+    transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  #angularDartPoint1, #angularDartDescription, #angularDartPoint2: left(1500) hide;
+  #angularDartText2: move(-1500,-1000) hide;
+  #angularDartLogo2: move(1500,-1000) hide;
+}
+
+#smartMove, #ngTypeScript, #ngTypeScriptDescr: hide;
+
+#smartMove{
+  img{
+    width: 800px;
+  }
+}
+
+.s6{
+  #smartMove: show;
+  #atscript: down(1000) hide;
+  #atscriptDescr: up(1000) hide;
+}
+
+#ngTypeScript {
+  transform: rotateY(270deg);
+}
+#ngTypeScriptDescr: up(300);
+
+.s7{
+  #smartMove: hide;
+
+  #smartMove {
+    transform: rotateY(90deg);
+    transition-duration: 2s;
+  }
+
+  #ngTypeScript {
+    transform: rotateY(360deg);
+    transition-duration: 2s;
+  }
+
+  #ngTypeScript: show;
+  #ngTypeScriptDescr: show;
+}
+
+
+
