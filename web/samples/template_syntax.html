@@ -1,0 +1,6 @@
+<!-- "The sum of 1 + 1 is not 4" -->
+<p>The sum of 1 + 1 is not {{1 + 1 + getVal()}}</p>
+
+<button (click)="onSave($event)" [disabled]="isDisabled"></button>
+
+<input type="text" [(ngModel)]="model.name">

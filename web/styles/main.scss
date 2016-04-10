@@ -397,3 +397,52 @@ symbol[sample]{
   #componentSample: up(150);
   #highlighter: up(150);
 }
+
+#templateSyntax: hide;
+#templateSyntaxTitle: up(300) hide;
+
+.s22{
+
+  #componentUsageSample: up(800) hide;
+  #arrowdown: up(800) hide;
+  #componentSample: up(800) hide;
+  #highlighter: up(800) hide;
+  #highlighter{
+    opacity: 0;
+    transition-duration: 0s;
+  }
+
+  #templateSyntax:show;
+  #templateSyntaxTitle:show;
+}
+#templateSyntaxSample: right(1000) hide;
+.s23{
+  #templateSyntax: left(1000) hide;
+  #templateSyntaxSample: left(1000) show;
+  #highlighter: move(55,-42);
+  #highlighter{
+    width: 290px;
+    height: 30px;
+  }
+}
+
+.s24{
+  #highlighter{
+    opacity: 0.5;
+  }
+}
+
+.s25{
+  #highlighter: move(-180,20);
+  #highlighter{
+    width: 350px;
+  }
+}
+
+.s26{
+  #highlighter: move(170,20);
+}
+
+.s27{
+  #highlighter: move(-20,82);
+}
