@@ -61,16 +61,6 @@ html, body {
 }
 #angularDartText: up(200);
 
-#angularDartText2,
-#angularDartDescription,
-#angularDartPoint1,
-#angularDartPoint2 {
-  width: 730px;
-  transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-#angularDartDescription, #angularDartPoint1, #angularDartPoint2: left(1500);
-
 .s2{
   #talkInfo,#title,#title2,#speaker,#time,#intro: hide;
   #angularDartText: show;
@@ -80,11 +70,58 @@ html, body {
   #angularDartLogo: show;
 }
 
-#angularDartLogo2: move(300,-200) hide;
-#angularDartText2: move(-250,-200) hide;
-.s4 {
-  #angularDartText: move(-250,-200) scale(0.6,0.6) hide;
-  #angularDartLogo: move(300,-200) scale(0.2,0.2) hide;
+#angularDartText2,
+#angularDartDescription,
+#angularDartPoint1,
+#angularDartPoint2{
+  width: 730px;
+  transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#angularDartDescription,
+#angularDartPoint1,
+#angularDartPoint2 {
+  color: white;
+}
+
+#angularDartDescription{
+  padding: 10px 10px 100px 10px;
+  background-color: #5C6E7E;
+  border: 4px dotted black;
+  opacity: 0.8;
+}
+
+#angularDartDescription, #angularDartPoint1, #angularDartPoint2: left(1500);
+
+#angularDartVersions{
+  img{
+    width: 1000px;
+  }
+
+  padding: 10px 50px;
+  background-color: #5C6E7E;
+  opacity: 0.9;
+}
+
+#angularDartVersions: up(1500);
+
+.s4{
+  #angularDartVersions{
+    transition-duration: 60s;
+  }
+  #angularDartVersions: down(3000);
+}
+
+#angularDartLogo2: move(400,-200) hide;
+#angularDartText2: move(-150,-200) hide;
+.s5 {
+  #angularDartVersions: hide;
+  #angularDartVersions{
+    transition-duration: 0;
+  }
+
+  #angularDartText: move(-150,-200) scale(0.6,0.6) hide;
+  #angularDartLogo: move(400,-200) scale(0.2,0.2) hide;
 
   #angularDartText2: show;
   #angularDartLogo2: show;
@@ -95,12 +132,10 @@ html, body {
     transition-delay: 0.5s;
   }
 
-  #angularDartPoint1: left(250);
-  #angularDartDescription: move(-250,-50);
-  #angularDartPoint2: move(-250,50);
-
+  #angularDartPoint1: left(150);
+  #angularDartDescription: move(-150,0);
+  #angularDartPoint2: move(-150,50);
 }
-
 
 #atscriptDescr: up(1000) hide;
 #atscript: down(1000) hide;
@@ -110,7 +145,7 @@ html, body {
   }
 }
 
-.s5{
+.s6{
   #atscript: move(0,0) show;
   #atscriptDescr: move(0,-300) show;
 
@@ -131,7 +166,7 @@ html, body {
   }
 }
 
-.s6{
+.s7{
   #smartMove: show;
   #atscript: down(1000) hide;
   #atscriptDescr: up(1000) hide;
@@ -142,7 +177,7 @@ html, body {
 }
 #ngTypeScriptDescr: up(300);
 
-.s7{
+.s8{
   #smartMove: hide;
 
   #smartMove {
@@ -155,9 +190,121 @@ html, body {
     transition-duration: 2s;
   }
 
-  #ngTypeScript: show;
-  #ngTypeScriptDescr: show;
+  #ngTypeScript, #ngTypeScriptDescr: show;
+}
+
+#architecture, #architectureTitle: hide;
+#architectureTitle: up(300);
+
+.s9{
+  #architecture, #architectureTitle: show;
+  #ngTypeScript, #ngTypeScriptDescr: hide;
+}
+
+#basicIdeas, #everythingIsClass, #componentBased, #stamp1, #stamp2: hide;
+#stamp1,#stamp2{
+  img{
+    width: 400px;
+  }
+}
+
+#basicIdeas: up(50);
+#basicIdeas{
+  font-size: 40px;
+}
+
+#componentBased, #everythingIsClass{
+  color: #B20D0D;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+#stamp1, #componentBased{
+  transition-duration: 0.5s;
+  transform: translateX(-200px) translateY(-180px) rotateZ(23deg) scale(10);
+}
+
+#everythingIsClass {
+  font-size: 22px;
+}
+#stamp2, #everythingIsClass{
+  transition-duration: 0.5s;
+  transform: translateX(150px) translateY(100px) rotateZ(-35deg) scale(10);
+}
+
+.s10{
+  #architecture, #architectureTitle: hide;
+  #basicIdeas: show;
+}
+
+.s11{
+  #stamp1: show;
+  #componentBased: show;
+  #stamp1, #componentBased {
+    transform: translateX(-200px) translateY(-180px) rotateZ(23deg) scale(1);
+  }
+}
+
+.s12{
+  #stamp2: show;
+  #everythingIsClass: show;
+  #stamp2, #everythingIsClass{
+    transform: translateX(150px) translateY(100px) rotateZ(-35deg) scale(1);
+  }
+}
+
+#whyComponent, #whyComponentImg, #componentControl, #componentApi, #componentLifeCycle: hide;
+
+#whyComponent: up(1000);
+#whyComponent{
+  font-size: 40px;
+}
+
+#componentControl: move(1000,-70);
+#componentApi: right(1000);
+#componentLifeCycle: move(1000,70);
+#componentControl, #componentApi, #componentLifeCycle{
+  width: 900px;
 }
 
 
+.s13{
+  #stamp2: down(800) hide;
+  #basicIdeas: down(800) hide;
+  #everythingIsClass: down(800) hide;
+  #componentBased: down(800) hide;
+  #stamp1: down(800) hide;
 
+  #whyComponent: down(800) show;
+}
+
+.s14{
+  #componentControl:left(1000) show;
+}
+
+.s15{
+  #componentApi: left(1000) show;
+}
+
+.s16{
+  #componentLifeCycle: left(1000) show;
+}
+
+#componentTree{
+  img{
+    width: 600px;
+  }
+}
+#componentTreeTitle: up(300) right(1000);
+#componentTree: right(1000);
+#componentTree, #componentTreeTitle: hide;
+.s17{
+  #whyComponent: left(1000) hide;
+  #componentControl: left(1000) hide;
+  #componentApi: left(1000) hide;
+  #componentLifeCycle: left(1000) hide;
+
+  #componentTree: left(1000) show;
+  #componentTreeTitle: left(1000) show;
+
+}
