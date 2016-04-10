@@ -446,3 +446,90 @@ symbol[sample]{
 .s27{
   #highlighter: move(-20,82);
 }
+
+#apiTitle: up(300) hide;
+#apiGif: hide;
+#apiGif{
+  img{
+    width: 800px;
+  }
+}
+.s28{
+  #highlighter{
+    opacity: 0;
+  }
+  #templateSyntaxSample: up(1000) hide;
+  #templateSyntaxTitle: up(1000) hide;
+
+  #apiTitle: show;
+  #apiGif: show;
+}
+
+#apiOverview, #apiCommunication{
+  img{
+    height: 500px;
+  }
+}
+#apiOverview: right(1000) hide;
+.s29{
+  #apiOverview: left(1000) show;
+  #apiGif: left(1000) hide;
+}
+
+#apiCommunication: right(1000) hide;
+.s30{
+  #apiCommunication: left(1000) show;
+  #apiOverview: left(1000) hide;
+}
+
+#componentSample2: right(1000) hide;
+.s31{
+  #componentSample2: left(1000) show;
+  #apiCommunication: left(1000) hide;
+  #highlighter: move(30,60);
+  #highlighter{
+    transition-duration: 1s;
+    width: 750px;
+    height: 70px;
+  }
+}
+
+.s32{
+  #highlighter{
+    opacity: 0.5;
+  }
+  #arrowdown: move(0,85) hide;
+}
+
+#componentUsageSample2: down(150) hide;
+
+.s33{
+  #apiTitle: up(50);
+  #componentUsageSample2: show;
+  #arrowdown:show;
+  #componentSample2: up(140);
+  #highlighter: up(140);
+}
+
+#lifcycleTitle: up(350) hide;
+#lifcycle:hide;
+#lifcycle{
+  img{
+    height: 600px;
+  }
+}
+
+.s34{
+  #apiTitle: up(800);
+  #componentUsageSample2: up(800) hide;
+  #arrowdown: up(800) hide;
+  #componentSample2: up(800) hide;
+  #highlighter: up(800);
+  #highlighter{
+    opacity: 0;
+  }
+
+  #lifcycleTitle: show;
+  #lifcycle:show;
+}
+
