@@ -21,6 +21,7 @@ html, body {
 }
 #line: move(-200,300);
 
+#title,#title2,#speaker,#time: hide;
 #intro{
   img {
     width: 100%;
@@ -33,20 +34,31 @@ html, body {
   background-color: #5C6E7E;
   opacity: 0.8;
 }
-#talkInfo: left(300);
+#talkInfo: left(200) hide;
 
 #title, #title2, #speaker, #time{
   color: white;
+  width: 700px;
+  padding-left: 50px;
 }
 
 #title, #title2{
   font-size: 60px;
 }
-#title: move(-300,-120);
-#title2: move(-300,-40);
+#title: move(-200,-120);
+#title2: move(-200,-40);
 
-#speaker: move(-300,100);
-#time: move(-300,150);
+#speaker: move(-200,100);
+#time: move(-200,150);
+
+.s1{
+  #talkInfo,#title,#title2,#speaker,#time: show;
+  #talkInfo{
+    opacity: 0.8;
+  }
+
+  #angularDartVersions: show;
+}
 
 #angularDartLogo{
   img{
@@ -82,6 +94,7 @@ html, body {
 #angularDartPoint1,
 #angularDartPoint2 {
   color: white;
+  transition-delay: 1s;
 }
 
 #angularDartDescription{
@@ -103,7 +116,7 @@ html, body {
   opacity: 0.9;
 }
 
-#angularDartVersions: up(1500);
+#angularDartVersions: up(1200) hide;
 
 .s4{
   #angularDartVersions{
@@ -112,19 +125,19 @@ html, body {
   #angularDartVersions: down(3000);
 }
 
-#angularDartLogo2: move(400,-200) hide;
+#angularDartLogo2: move(400,-200) scale(0.1,0.1) hide;
 #angularDartText2: move(-150,-200) hide;
 .s5 {
   #angularDartVersions: hide;
   #angularDartVersions{
-    transition-duration: 0;
+    transition-duration: 0s;
   }
 
-  #angularDartText: move(-150,-200) scale(0.6,0.6) hide;
+  #angularDartText: move(-250,-200) scale(0.6,0.6) hide;
   #angularDartLogo: move(400,-200) scale(0.2,0.2) hide;
 
   #angularDartText2: show;
-  #angularDartLogo2: show;
+  #angularDartLogo2: scale(1,1) show;
 
   #angularDartLogo2 {
     transition-timing-function: ease-in;
@@ -151,6 +164,12 @@ html, body {
 
   #angularDartLogo2 {
     transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  #angularDartDescription,
+  #angularDartPoint1,
+  #angularDartPoint2 {
+    transition-delay: 0s;
   }
 
   #angularDartPoint1, #angularDartDescription, #angularDartPoint2: left(1500) hide;
@@ -198,7 +217,8 @@ html, body {
 
 .s9{
   #architecture, #architectureTitle: show;
-  #ngTypeScript, #ngTypeScriptDescr: hide;
+  #ngTypeScript: down(1500) hide;
+  #ngTypeScriptDescr: up(300) hide;
 }
 
 #basicIdeas, #everythingIsClass, #componentBased, #stamp1, #stamp2: hide;
@@ -233,7 +253,11 @@ html, body {
 }
 
 .s10{
-  #architecture, #architectureTitle: hide;
+  #architecture: scale(0,0) move(0,-50) hide;
+  #architectureTitle: hide;
+  #architectureTitle{
+    transition-duration: 0s;
+  }
   #basicIdeas: show;
 }
 
@@ -306,5 +330,70 @@ html, body {
 
   #componentTree: left(1000) show;
   #componentTreeTitle: left(1000) show;
+}
 
+#showCode: scale(10,10) hide;
+#showCode {
+  transition-duration: 0.2s;
+}
+
+.s18{
+  #showCode: scale(-9,-9) show;
+
+  #componentTree, #componentTreeTitle {
+    opacity: 0.5;
+  }
+}
+
+symbol[sample]{
+  border: 3px solid #5C6E7E;
+  font-size: 26px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+  pre{
+    margin: 0;
+    padding: 10px;
+  }
+}
+
+#highlighter{
+  background-color: grey;
+  z-index: 100;
+}
+#highlighter: up(40) hide;
+
+#componentSample: hide;
+
+.s19{
+  #showCode: scale(10,10) hide;
+  #componentTree, #componentTreeTitle:hide;
+  #componentTree, #componentTreeTitle{
+    transition-delay: 0.5s;
+  }
+  #componentSample: show;
+  #highlighter{
+    width: 700px;
+    height: 100px;
+  }
+}
+
+.s20{
+  #highlighter{
+    opacity: 0.5;
+  }
+}
+
+#arrowdown{
+  img{
+    height: 75px;
+  }
+}
+#arrowdown: down(35) hide;
+#componentUsageSample: down(100) hide;
+
+.s21{
+  #componentUsageSample: show;
+  #arrowdown:show;
+  #componentSample: up(150);
+  #highlighter: up(150);
 }
