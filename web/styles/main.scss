@@ -1,12 +1,16 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
 html, body {
-  font-family: 'Arial', monospace;
+  font-family: 'Montserrat', monospace;
   padding:0;
   margin:0;
   overflow: hidden;
-  color: #5C6E7E;
-  font-size: 30px;
+  color: #4C9179;
+  font-size: 26px;
 }
 
+#logo:hide;
+#line:hide;
 #logo{
   img {
     width: 300px;
@@ -16,7 +20,7 @@ html, body {
 #logo: move(600,300);
 
 #line {
-  border: 2px solid #5C6E7E;
+  border: 2px solid #4C9179;
   width: 70%;
 }
 #line: move(-200,300);
@@ -31,7 +35,7 @@ html, body {
 #talkInfo{
   width: 700px;
   height: 400px;
-  background-color: #5C6E7E;
+  background-color: #4C9179;
   opacity: 0.8;
 }
 #talkInfo: left(200) hide;
@@ -43,7 +47,7 @@ html, body {
 }
 
 #title, #title2{
-  font-size: 60px;
+  font-size: 50px;
 }
 #title: move(-200,-120);
 #title2: move(-200,-40);
@@ -69,7 +73,7 @@ html, body {
 #angularDartLogo2, #angularDartText2: hide;
 
 #angularDartText{
-  font-size: 50px;
+  font-size: 40px;
 }
 #angularDartText: up(200);
 
@@ -99,7 +103,7 @@ html, body {
 
 #angularDartDescription{
   padding: 10px 10px 100px 10px;
-  background-color: #5C6E7E;
+  background-color: #4C9179;
   border: 4px dotted black;
   opacity: 0.8;
 }
@@ -112,7 +116,7 @@ html, body {
   }
 
   padding: 10px 50px;
-  background-color: #5C6E7E;
+  background-color: #4C9179;
   opacity: 0.9;
 }
 
@@ -230,12 +234,12 @@ html, body {
 
 #basicIdeas: up(50);
 #basicIdeas{
-  font-size: 40px;
+  font-size: 34px;
 }
 
 #componentBased, #everythingIsClass{
   color: #B20D0D;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -245,7 +249,7 @@ html, body {
 }
 
 #everythingIsClass {
-  font-size: 22px;
+  font-size: 20px;
 }
 #stamp2, #everythingIsClass{
   transition-duration: 0.5s;
@@ -346,7 +350,7 @@ html, body {
 }
 
 symbol[sample]{
-  border: 3px solid #5C6E7E;
+  border: 3px solid #4C9179;
   font-size: 26px;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 
@@ -511,13 +515,14 @@ symbol[sample]{
   #highlighter: up(140);
 }
 
-#lifcycleTitle: up(350) hide;
-#lifcycle:hide;
-#lifcycle{
+#lifecycleTitle: down(700) hide;
+
+#lifeCycleGif{
   img{
-    height: 600px;
+    height: 450px;
   }
 }
+#lifeCycleGif: down(1000) hide;
 
 .s34{
   #apiTitle: up(800);
@@ -529,7 +534,57 @@ symbol[sample]{
     opacity: 0;
   }
 
-  #lifcycleTitle: show;
-  #lifcycle:show;
+  #lifecycleTitle: up(1000) show;
+  #lifeCycleGif: up(1025) show;
 }
 
+#lifecycle1: up(50) left(1000) hide;
+#lifecycle2: right(1000) hide;
+#lifecycle1 li,
+#lifecycle2 li{
+  color: white;
+  padding: 34px 0;
+  list-style-type: none;
+  width: 400px;
+  position: relative;
+}
+
+#lifecycle1 li:after,
+#lifecycle2 li:after{
+  position: absolute;
+  top: 70px;
+  left: 50px;
+  content: " ";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 15px 0 15px;
+  border-color: #ffffff transparent transparent transparent;
+}
+
+#lifeCycleBackground: up(25);
+#lifeCycleBackground{
+  background-color: #4C9179;
+  border: 4px dotted black;
+  opacity: 0;
+  width: 450px;
+  height: 450px;
+}
+
+
+.s35{
+
+  #lifeCycleGif: scale(0.5,1) hide;
+
+  #lifecycleTitle: show;
+  #lifecycle1: right(1050) show;
+  #lifecycle2: left(950) show;
+
+  #lifecycle1, #lifecycle2{
+    transition-delay: 1s;
+  }
+
+  #lifeCycleBackground{
+    opacity: 0.8;
+  }
+}
