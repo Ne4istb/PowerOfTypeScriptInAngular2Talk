@@ -6,7 +6,8 @@ class Logger {
     constructor(private _userService: UserService) { }
 
     log(message:string){
-        message = `Message to ${this._userService.user.name}: ${message}.`;
+        let userName = this._userService.user.name;
+        message = `Message to ${userName}: ${message}.`;
         console.log(message);
         this.logs.push(message);
     }

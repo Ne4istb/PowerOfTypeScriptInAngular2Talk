@@ -1,0 +1,1 @@
+ng github-pages:deploy --message "Commit message"

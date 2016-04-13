@@ -1,0 +1,1 @@
+ng generate route hero
