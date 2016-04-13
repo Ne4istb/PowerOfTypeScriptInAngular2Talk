@@ -9,6 +9,13 @@ html, body {
   font-size: 26px;
 }
 
+a:link,
+a:active,
+a:visited,
+a:hover{
+  color:blue;
+}
+
 .container{
 
   display: flex;
@@ -762,10 +769,10 @@ symbol[sample]{
 .s44{
 
   #classTitle: up(1000) hide;
-  #classPipeSample: up(1000) hide;
-  #classComponentSample: up(1000) hide;
-  #classDirectiveSample: up(1000) hide;
-  #classServiceSample: up(1000) hide;
+  #classPipeSample: move(500,-500) hide;
+  #classComponentSample: move(-500,-500) hide;
+  #classDirectiveSample: move(500,500) hide;
+  #classServiceSample: move(-500,500) hide;
 
   #classTitle{
     transition-delay: 0s;
@@ -976,4 +983,84 @@ symbol[sample]{
   #ngInit: scale(-0.2,-0.2) up(10);
   #ngGenerate: scale(-0.2,-0.2) up(50);
   #ngDeploy: scale(0.7,0.7) down(150) show;
+}
+
+#links: down(1000) hide;
+
+.s62{
+
+  #links: up(1300) show;
+
+  #toolsTitle:up(1000) hide;
+  #toolQr: up(1000) hide;
+  #toolLink: up(1000) hide;
+  #ngInstall: up(1000) hide;
+  #ngInit: up(1000) hide;
+  #ngGenerate:up(1000) hide;
+  #ngDeploy: up(1000) hide;
+}
+
+#angularQr:move(-300,-200) hide;
+#angularLink:move(150,-200) hide;
+
+#angularQr, #styleGuideQr,#savkinQr{
+  img{
+    height: 200px;
+  }
+}
+
+#angularLink, #styleGuideLink,#savkinLink {
+  text-decoration: none;
+  width:700px;
+}
+.s63{
+  #angularQr: show;
+  #angularLink:show;
+}
+
+#styleGuideQr:move(-300,0) hide;
+#styleGuideLink:move(150,0) hide;
+
+.s64{
+  #styleGuideQr: show;
+  #styleGuideLink:show;
+}
+
+#savkinQr:move(-300,200) hide;
+#savkinLink:move(150,200) hide;
+
+.s65{
+  #savkinQr: show;
+  #savkinLink:show;
+}
+
+#questions: scale(0.1,0.1) hide;
+#questionsTitle: up(300) scale(0.1,0.1) hide;
+
+.s66{
+  #links: up(1000) hide;
+
+  #angularQr: left(1000) hide;
+  #angularLink:left(1000) hide;
+
+  #savkinQr: left(1000) hide;
+  #savkinLink:left(1000) hide;
+
+  #styleGuideQr: right(1000) hide;
+  #styleGuideLink:right(1000) hide;
+
+  #questions: scale(0.9,0.9) show;
+  #questionsTitle: scale(0.9,0.9) show;
+}
+
+#thanks: scale(0.1,0.1) hide;
+#thanks{
+  img {
+    height: 500px;
+  }
+}
+.s67{
+  #questions: scale(-0.9,-0.9) hide;
+  #questionsTitle: scale(-0.9,-0.9) hide;
+  #thanks: scale(0.9,0.9) show;
 }
