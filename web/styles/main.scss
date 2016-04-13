@@ -9,6 +9,68 @@ html, body {
   font-size: 26px;
 }
 
+.container{
+
+  display: flex;
+  align-items: flex-end;
+  height: 100vh;
+
+  .presentation{
+    flex: none;
+  }
+
+  .footer{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+
+    z-index: 198;
+    padding: 20px 50px;
+    background-color: white;
+
+    .page-container{
+      flex: none;
+      height: 30px;
+      width: 30px;
+      border: 2px solid #ababab;
+      margin: 5px 0;
+      border-radius: 50%;
+    }
+
+    .line-container{
+      flex: 1;
+      padding: 21px 10px 0 0;
+
+      .line{
+        height: 4px;
+        background: #ababab;
+      }
+    }
+    .logo{
+      flex: none;
+      height: 40px;
+    }
+  }
+}
+
+controls{
+  z-index: 199;
+  top: initial;
+  bottom: 21px;
+  left: 42px;
+}
+
+#current{
+  font-size: 18px;
+  color: #626262;
+  width: 30px;
+  display: block;
+  text-align: center;
+}
+#previous, #next, #comments{
+  display: none;
+}
+
 #logo:hide;
 #line:hide;
 #logo{
@@ -26,6 +88,9 @@ html, body {
 #line: move(-200,300);
 
 #title,#title2,#speaker,#time: hide;
+#title,#title2,#speaker,#time,#intro,#talkInfo{
+  z-index: 200;
+}
 #intro{
   img {
     width: 100%;
@@ -120,7 +185,7 @@ html, body {
   opacity: 0.9;
 }
 
-#angularDartVersions: up(1200) hide;
+#angularDartVersions: up(1200);
 
 .s4{
   #angularDartVersions{
