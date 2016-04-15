@@ -638,7 +638,7 @@ symbol[sample]{
 }
 
 #lifecycle1 li:after,
-#lifecycle2 li:after:not(:last-child){
+#lifecycle2 li:not(:last-child):after{
   position: absolute;
   top: 70px;
   left: 50px;
